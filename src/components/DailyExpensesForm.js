@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ExpenseInput from './ExpenseInput'
+
 
 class DailyExpensesForm extends React.Component {
   constructor (props) {
@@ -14,7 +16,8 @@ class DailyExpensesForm extends React.Component {
     const{fuelSavings} = this.props;
     return (
       <div>
-        
+        <h2>Expense Report</h2>
+        <ExpenseInput onChange={this.expensesKeyPress} name="funExpenses" value={fuelSavings.funExpenses}/>
       </div>
     )
   }
