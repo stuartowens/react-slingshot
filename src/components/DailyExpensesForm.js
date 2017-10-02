@@ -17,7 +17,7 @@ class DailyExpensesForm extends React.Component {
     return (
       <div>
         <h2>Expense Report</h2>
-        <ExpenseInput onChange={this.expensesKeyPress} name="funExpenses" value={fuelSavings.funExpenses}/>
+        <ExpenseInput onChange={this.expensesKeyPress} name="funExpenses" fuelSavings={fuelSavings}/>
       </div>
     )
   }

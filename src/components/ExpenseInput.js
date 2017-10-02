@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ExpenseResult from './ExpenseResult'
+
 
 const ExpenseInput = (props) => {
   const handleChange = (e) => {
@@ -7,11 +9,13 @@ const ExpenseInput = (props) => {
   };
 
   return (
+    <div>
     <input
       type="text"
       placeholder={props.placeholder}
-      value={props.value}
       onChange={handleChange}/>
+      <ExpenseResult fuelSavings={props.fuelSavings} />
+      </div>
   );
 };
 

@@ -10,7 +10,7 @@ export const FinancesPage = (props) => {
     <div>Hi
       <DailyExpensesForm
         calculateSavings = {props.actions.calculateSavings}
-        fuelSaving={props.fuelSavings}
+        fuelSavings={props.fuelSavings}
       />
     </div>
 
