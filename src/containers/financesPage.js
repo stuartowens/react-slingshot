@@ -3,15 +3,29 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as actions from '../actions/financeActions';
+import DailyExpensesForm from '../components/DailyExpensesForm'
 
 export const FinancesPage = (props) => {
   return (
-    <div>Hi</div>
+    <div>Hi
+      <DailyExpensesForm
+        calculateSavings = {props.actions.calculateSavings}
+        fuelSaving={props.fuelSavings}
+      />
+    </div>
+
+
   );
 };
+
+FinancesPage.propTypes = {
+  actions: PropTypes.object.isRequired,
+  fuelSavings: PropTypes.object.isRequired
+};
+
 function mapStateToProps(state) {
   return {
-    Savings: state.Savings
+    fuelSavings: state.fuelSavings
   };
 }
 

@@ -7,7 +7,7 @@ const savingsCalculator = function() {
       return weeklyExpenses*7;
     },
     calculateSavings: function (expenses, savings) {
-      let currentExpenses  = this.calculateDailyExpenses(expenses);
+      const currentExpenses  = this.calculateDailyExpenses(expenses.dailyExpenses);
       return savings.savingAccount - currentExpenses;
     },
   };

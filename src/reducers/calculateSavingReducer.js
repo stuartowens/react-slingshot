@@ -1,4 +1,4 @@
-import { CALCULATE_SAVINGS } from '../constants/actionTypes.js';
+import { CALCULATE_SAVINGS } from '../constants/actionTypes';
 import objectAssign from 'object-assign';
 import initialState from './initialState';
 
