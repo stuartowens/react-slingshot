@@ -15,7 +15,7 @@ export function saveFinances(settings) {
   };
 }
 
-export function calculateFuelSavings(settings, fieldName, value) {
+export function calculateSavings(settings, fieldName, value) {
   return {
     type: types.CALCULATE_SAVINGS,
     dateModified: getFormattedDateTime(),
