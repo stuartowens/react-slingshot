@@ -15,7 +15,6 @@ class DailyExpensesForm extends React.Component {
   }
   render() {
     const{ expenses } = this.props;
-    console.log(expenses, "expensesessssss33333");
     return (
       <div>
         <h2>Expense Report</h2>
@@ -29,10 +28,27 @@ class DailyExpensesForm extends React.Component {
         <ExpenseResult expense={expenses.foodExpenses} label="Food Expense"/>
         <ExpenseResult expense={expenses.dailyExpense} label="Daily Expense"/>
         <ExpenseResult expense={expenses.weeklyExpenses} label="Weekly Expenses"/>
-
       </div>
-    )
+    );
   }
 }
+
+DailyExpensesForm.propTypes = {
+  calculateSavings: PropTypes.func.isRequired,
+  expenses: PropTypes.shape({
+    funExpenses: PropTypes.string,
+    vehicleExpenses: PropTypes.string,
+    housingExpenses: PropTypes.string,
+    petExpenses: PropTypes.string,
+    foodExpenses: PropTypes.string,
+    travelExpenses: PropTypes.string,
+    dailyExpense: PropTypes.string,
+    weeklyExpenses: PropTypes.string,
+    daysEntered: PropTypes.string,
+    dailyExpenseAverage: PropTypes.string,
+    savingsAccount: PropTypes.string,
+    checkingAccount: PropTypes.string,
+  })
+};
 
 export default DailyExpensesForm;
