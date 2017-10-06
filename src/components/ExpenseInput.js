@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ExpenseResult from './ExpenseResult'
+
 
 
 const ExpenseInput = (props) => {
@@ -14,7 +14,7 @@ const ExpenseInput = (props) => {
       type="text"
       placeholder={props.placeholder}
       onChange={handleChange}/>
-      <ExpenseResult fuelSavings={props.fuelSavings} />
+
       </div>
   );
 };

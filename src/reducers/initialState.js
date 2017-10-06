@@ -1,19 +1,5 @@
 export default {
-  fuelSavings: {
-    newMpg: '',
-    tradeMpg: '',
-    newPpg: '',
-    tradePpg: '',
-    milesDriven: '',
-    milesDrivenTimeframe: 'week',
-    displayResults: false,
-    dateModified: null,
-    necessaryDataIsProvidedToCalculateSavings: false,
-    savings: {
-      monthly: 0,
-      annual: 0,
-      threeYear: 0
-    },
+  expenses: {
     funExpenses: 0,
     vehicleExpenses: 0,
     housingExpenses: 0,
@@ -21,6 +7,7 @@ export default {
     foodExpenses: 0,
     travelExpenses: 0,
     dailyExpense: 0,
+    weeklyExpenses: 0,
     daysEntered: 0,
     dailyExpenseAverage: 0,
     savingsAccount: 5000,

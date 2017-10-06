@@ -1,10 +1,10 @@
 const savingsCalculator = function() {
   return {
     calculateDailyExpenses: function (expenses) {
-      return expenses.funExpenses + expenses.vehicleExpenses + expenses.housingExpenses + expenses.petExpenses + expenses.foodExpenses + expenses.travelExpenses;
+      return Number.parseInt(expenses.funExpenses) + Number.parseInt(expenses.vehicleExpenses) + Number.parseInt(expenses.housingExpenses) + Number.parseInt(expenses.petExpenses) + Number.parseInt(expenses.foodExpenses) + Number.parseInt(expenses.travelExpenses);
     },
-    calculateWeeklyExpenses: function (weeklyExpenses) {
-      return weeklyExpenses*7;
+    calculateWeeklyExpenses: function (dailyExpense) {
+      return dailyExpense*7;
     },
     calculateSavings: function (expenses, savings) {
       const currentExpenses  = this.calculateDailyExpenses(expenses.dailyExpenses);
@@ -12,5 +12,6 @@ const savingsCalculator = function() {
     },
   };
 };
+Number
 
 export default savingsCalculator;

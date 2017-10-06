@@ -1,14 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ExpenseResults = ({ fuelSavings }) => {
-  const handleChange = (e) => {
-    props.onChange(props.name, e.target.value);
-  };
-
+const ExpenseResult = ({ expense, label }) => {
   return (
-    <h1>{fuelSavings.funExpenses}</h1>
+    <h3>{label}: {expense}</h3>
   );
 };
 
-export default ExpenseResults;
+export default ExpenseResult;

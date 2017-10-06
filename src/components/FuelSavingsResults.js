@@ -12,7 +12,7 @@ const FuelSavingsResults = ({savings}) => {
   const savingsExist = NumberFormatter.scrubFormatting(savings.monthly) > 0;
   const savingsClass = savingsExist ? 'savings' : 'loss';
   const resultLabel = savingsExist ? 'Savings' : 'Loss';
-
+  console.log(savings, 'savings@@@@@@')
   // You can even exclude the return statement below if the entire component is
   // composed within the parentheses. Return is necessary here because some
   // variables are set above.

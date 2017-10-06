@@ -10,7 +10,7 @@ export const FinancesPage = (props) => {
     <div>Hi
       <DailyExpensesForm
         calculateSavings = {props.actions.calculateSavings}
-        fuelSavings={props.fuelSavings}
+        expenses={props.expenses}
       />
     </div>
 
@@ -20,12 +20,12 @@ export const FinancesPage = (props) => {
 
 FinancesPage.propTypes = {
   actions: PropTypes.object.isRequired,
-  fuelSavings: PropTypes.object.isRequired
+  expenses: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
   return {
-    fuelSavings: state.fuelSavings
+    expenses: state.calculateSavingsReducer
   };
 }
 

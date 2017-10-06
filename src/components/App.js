@@ -3,8 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, NavLink, Route } from 'react-router-dom';
 import HomePage from './HomePage';
-import FuelSavingsPage from '../containers/FuelSavingsPage';
-import FinancesPage from '../containers/FinancesPage'
+import FinancesPage from '../containers/FinancesPage';
 import AboutPage from './AboutPage';
 import NotFoundPage from './NotFoundPage';
 
@@ -20,17 +19,14 @@ class App extends React.Component {
         <div>
           <NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink>
           {' | '}
-          <NavLink to="/fuel-savings" activeStyle={activeStyle}>Demo App</NavLink>
-          {' | '}
           <NavLink to="/about" activeStyle={activeStyle}>About</NavLink>
           {' | '}
-          <NavLink to="/portfolio" activeStyle={activeStyle}>Portfolio</NavLink>
+          <NavLink to="/finances" activeStyle={activeStyle}>Finances</NavLink>
         </div>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/fuel-savings" component={FuelSavingsPage} />
           <Route path="/about" component={AboutPage} />
-          <Route path="/portfolio" component={FinancesPage} />
+          <Route path="/finances" component={FinancesPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>
